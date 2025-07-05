@@ -1,0 +1,108 @@
+import { Transaction, Budget, Category } from '../types/finance';
+
+export const categories: Category[] = [
+  { id: '1', name: 'Food & Dining', color: '#FF6B6B', icon: 'utensils' },
+  { id: '2', name: 'Transportation', color: '#4ECDC4', icon: 'car' },
+  { id: '3', name: 'Shopping', color: '#45B7D1', icon: 'shopping-bag' },
+  { id: '4', name: 'Entertainment', color: '#96CEB4', icon: 'film' },
+  { id: '5', name: 'Bills & Utilities', color: '#FFEAA7', icon: 'receipt' },
+  { id: '6', name: 'Healthcare', color: '#DDA0DD', icon: 'heart' },
+  { id: '7', name: 'Education', color: '#98D8C8', icon: 'book' },
+  { id: '8', name: 'Travel', color: '#F7DC6F', icon: 'plane' },
+  { id: '9', name: 'Income', color: '#58D68D', icon: 'dollar-sign' },
+  { id: '10', name: 'Other', color: '#85929E', icon: 'more-horizontal' },
+];
+
+export const mockTransactions: Transaction[] = [
+  {
+    id: '1',
+    amount: 4200,
+    date: '2024-01-15',
+    description: 'Monthly Salary',
+    category: 'Income',
+    type: 'income',
+  },
+  {
+    id: '2',
+    amount: 850,
+    date: '2024-01-01',
+    description: 'Rent Payment',
+    category: 'Bills & Utilities',
+    type: 'expense',
+  },
+  {
+    id: '3',
+    amount: 65,
+    date: '2024-01-03',
+    description: 'Grocery Shopping',
+    category: 'Food & Dining',
+    type: 'expense',
+  },
+  {
+    id: '4',
+    amount: 45,
+    date: '2024-01-05',
+    description: 'Gas Station',
+    category: 'Transportation',
+    type: 'expense',
+  },
+  {
+    id: '5',
+    amount: 120,
+    date: '2024-01-07',
+    description: 'New Shoes',
+    category: 'Shopping',
+    type: 'expense',
+  },
+  {
+    id: '6',
+    amount: 35,
+    date: '2024-01-10',
+    description: 'Movie Night',
+    category: 'Entertainment',
+    type: 'expense',
+  },
+  {
+    id: '7',
+    amount: 180,
+    date: '2024-01-12',
+    description: 'Electric Bill',
+    category: 'Bills & Utilities',
+    type: 'expense',
+  },
+  {
+    id: '8',
+    amount: 90,
+    date: '2024-01-14',
+    description: 'Restaurant Dinner',
+    category: 'Food & Dining',
+    type: 'expense',
+  },
+  {
+    id: '9',
+    amount: 200,
+    date: '2024-01-16',
+    description: 'Doctor Visit',
+    category: 'Healthcare',
+    type: 'expense',
+  },
+  {
+    id: '10',
+    amount: 75,
+    date: '2024-01-18',
+    description: 'Online Course',
+    category: 'Education',
+    type: 'expense',
+  },
+];
+
+export const mockBudgets: Budget[] = [
+  { id: '1', category: 'Food & Dining', amount: 500, month: '2024-01' },
+  { id: '2', category: 'Transportation', amount: 200, month: '2024-01' },
+  { id: '3', category: 'Shopping', amount: 300, month: '2024-01' },
+  { id: '4', category: 'Entertainment', amount: 150, month: '2024-01' },
+  { id: '5', category: 'Bills & Utilities', amount: 1200, month: '2024-01' },
+  { id: '6', category: 'Healthcare', amount: 300, month: '2024-01' },
+  { id: '7', category: 'Education', amount: 100, month: '2024-01' },
+  { id: '8', category: 'Travel', amount: 400, month: '2024-01' },
+];
