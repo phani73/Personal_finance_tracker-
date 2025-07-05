@@ -2,31 +2,29 @@ import { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { TransactionForm } from './TransactionForm';
-// import { transactionService } from '@/lib/transactionService';
+// Removed: import { TransactionForm } from './TransactionForm';
 import { Transaction, Budget } from '../../types/finance';
 import { categories } from '../../data/mockData';
 import { transactionService } from '../../services/transactionService';
-// your API service
 import { budgetService } from '../../services/budgetService'; 
 import {
   DollarSign, TrendingUp, TrendingDown, Calendar, Target, Wallet,
-  ArrowUpRight, ArrowDownRight, Plus
+  ArrowUpRight, ArrowDownRight
+  // Removed: Plus
 } from 'lucide-react';
 import { format } from 'date-fns';
 
 interface DashboardProps {
-  budgets: Budget[];
+  budgets?: Budget[]; // optional since you're fetching in useEffect
 }
 
-
-
-export const Dashboard = () => {
+export const Dashboard: React.FC<DashboardProps> = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [showForm, setShowForm] = useState(false);
   const [budgets, setBudgets] = useState<Budget[]>([]);
+  // Removed: const [showForm, setShowForm] = useState(false);
 
   const currentMonth = new Date().toISOString().slice(0, 7);
+
 
   const totalIncome = transactions
     .filter(t => t.type === 'income')
